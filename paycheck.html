@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paycheck Estimator</title>
+    <!--Natasha Johnson
+        CTP 130
+        Lab 3-->
+
+    <style>
+      table {
+        border: 1px solid #000;
+      }
+
+      th {
+        padding: 10px;
+      }
+    </style>
+    <script>
+      /*Delete all list items*/
+      function deleteListItem(){
+        window.WRAPPER.innerHTML = "";
+      }
+    </script>
+  </head>
+  <body>
+   <form method="POST" action="/paycheck.php">
+     <table>
+       <th colspan="2">Paycheck Calculator</th>
+       <tr>
+         <td><label for="employee">Employee ID:</label></td>
+         <td><input type="text" name="employeeID"></td>
+       </tr>
+       <tr>
+         <td><label for="hours">Hourly Worked:</label></td>
+         <td><input type="number" name="hoursWorked" min="1" max="60"></td>
+       </tr>
+       <tr>
+         <td><label for="wage">Hourly Wage:</label></td>
+         <td><input type="number" name="hourlyWage"></td>
+       </tr>
+     </table>
+         <input type="reset" name="reset-btn" onclick="deleteListItem()">
+         <input type="submit" name="submit-btn">
+   </form>
+  </body>
+</html>
